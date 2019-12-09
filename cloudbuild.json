@@ -5,7 +5,7 @@
             "args": [
                 "build",
                 "-t",
-                "gcr.io/[PROJECT_ID]/[IMAGE]",
+                "gcr.io/healthbuddy-cfc4a/latest",
                 "."
             ]
         },
@@ -13,7 +13,7 @@
             "name": "gcr.io/cloud-builders/docker",
             "args": [
                 "push",
-                "gcr.io/[PROJECT_ID]/[IMAGE]"
+                "gcr.io/healthbuddy-cfc4a/latest"
             ]
         },
         {
@@ -22,11 +22,11 @@
                 "beta",
                 "run",
                 "deploy",
-                "[SERVICE_NAME]",
+                "nextdocker",
                 "--image",
-                "gcr.io/[PROJECT_ID]/[IMAGE]",
+                "gcr.io/healthbuddy-cfc4a/latest",
                 "--region",
-                "[REGION]",
+                "europe-west1",
                 "--platform",
                 "managed",
                 "--allow-unauthenticated"
@@ -34,6 +34,6 @@
         }
     ],
     "images": [
-        "gcr.io/[PROJECT_ID]/[IMAGE]"
+        "gcr.io/healthbuddy-cfc4a/latest"
     ]
 }
