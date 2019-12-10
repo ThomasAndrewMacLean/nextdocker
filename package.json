@@ -1,40 +1,43 @@
 {
-  "name": "nextdocker",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "type-check": "tsc",
-    "start:production": "next start -p $PORT"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ThomasAndrewMacLean/nextdocker.git"
-  },
-  "keywords": [],
-  "author": "Thomas MacLean <hello@thomasmaclean.be> (https://thomasmaclean.be)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ThomasAndrewMacLean/nextdocker/issues"
-  },
-  "homepage": "https://github.com/ThomasAndrewMacLean/nextdocker#readme",
-  "dependencies": {
-    "@zeit/next-css": "^1.0.1",
-    "next": "^9.1.5",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
-  },
-  "devDependencies": {
-    "@types/node": "^12.12.16",
-    "@types/react": "^16.9.16",
-    "@types/react-dom": "^16.9.4",
-    "@typescript-eslint/eslint-plugin": "^2.11.0",
-    "@typescript-eslint/parser": "^2.11.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-react": "^7.17.0",
-    "typescript": "^3.7.3"
-  }
+    "name": "nextdocker",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "next",
+        "build": "next build",
+        "start": "next start",
+        "type-check": "tsc",
+        "start:production": "next start -p $PORT"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ThomasAndrewMacLean/nextdocker.git"
+    },
+    "keywords": [],
+    "author": "Thomas MacLean <hello@thomasmaclean.be> (https://thomasmaclean.be)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ThomasAndrewMacLean/nextdocker/issues"
+    },
+    "homepage": "https://github.com/ThomasAndrewMacLean/nextdocker#readme",
+    "dependencies": {
+        "@zeit/next-css": "^1.0.1",
+        "next": "^9.1.5",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "styled-components": "^4.4.1"
+    },
+    "devDependencies": {
+        "@types/node": "^12.12.16",
+        "@types/react": "^16.9.16",
+        "@types/react-dom": "^16.9.4",
+        "@types/styled-components": "^4.4.1",
+        "@typescript-eslint/eslint-plugin": "^2.11.0",
+        "@typescript-eslint/parser": "^2.11.0",
+        "babel-plugin-styled-components": "^1.10.6",
+        "eslint": "^6.7.2",
+        "eslint-plugin-react": "^7.17.0",
+        "typescript": "^3.7.3"
+    }
 }
