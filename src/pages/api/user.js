@@ -4,7 +4,10 @@ const sequelize = new Sequelize({
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE,
     host: process.env.DB_HOST,
-    dialect: 'postgres'
+    dialect: 'postgres',
+    dialectOptions: {
+        socketPath: process.env.DB_SOCKETPATH
+    }
 });
 
 class User extends Model {}
@@ -19,12 +22,16 @@ User.init(
 export default async (req, res) => {
     switch (req.method) {
     case 'GET':
-        sequelize
-            .sync()
-            .then(() => User.findAll())
-            .then(allUsers => {
-                res.json(allUsers);
-            });
+        try {
+            sequelize
+                .sync()
+                .then(() => User.findAll())
+                .then(allUsers => {
+                    res.json(allUsers);
+                });
+        } catch (error) {
+            res.json(error);
+        }
         break;
     case 'POST':
         sequelize
