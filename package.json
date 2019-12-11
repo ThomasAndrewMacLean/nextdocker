@@ -23,9 +23,14 @@
     "homepage": "https://github.com/ThomasAndrewMacLean/nextdocker#readme",
     "dependencies": {
         "@zeit/next-css": "^1.0.1",
+        "dotenv": "^8.2.0",
         "next": "^9.1.5",
+        "pg": "^7.14.0",
+        "pg-hstore": "^2.3.3",
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
+        "sequelize": "^5.21.2",
+        "sequelize-cli": "^5.5.1",
         "styled-components": "^4.4.1"
     },
     "devDependencies": {
