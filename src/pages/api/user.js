@@ -2,7 +2,7 @@ const { Sequelize, Model, DataTypes } = require('sequelize');
 
 const sequelize = new Sequelize(
     process.env.DB_DATABASE,
-    process.env.DB_USER,
+    'dbuser',
     process.env.DB_PASSWORD,
     {
         dialect: 'postgres',
@@ -19,8 +19,7 @@ const sequelize = new Sequelize(
             // same as host string above
             socketPath: `/cloudsql/${process.env.DB_CONNECTION_NAME}`
         },
-        logging: false,
-        operatorsAliases: false
+        logging: false
     }
 );
 
