@@ -1,7 +1,7 @@
 export default async (req, res) => {
     switch (req.method) {
     case 'GET':
-        res.json('pong');
+        res.json(process.env.TEST || 'pong');
 
         break;
     default:

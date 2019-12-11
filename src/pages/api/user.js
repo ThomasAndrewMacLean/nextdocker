@@ -1,14 +1,26 @@
 const { Sequelize, Model, DataTypes } = require('sequelize');
+
 const sequelize = new Sequelize(
     process.env.DB_DATABASE,
     process.env.DB_USER,
     process.env.DB_PASSWORD,
     {
-        host: process.env.DB_HOST || 'localhost',
         dialect: 'postgres',
+        // e.g. host: '/cloudsql/my-awesome-project:us-central1:my-cloud-sql-instance'
+        host: `/cloudsql/${process.env.DB_CONNECTION_NAME}`,
+        pool: {
+            max: 5,
+            min: 0,
+            acquire: 30000,
+            idle: 10000
+        },
         dialectOptions: {
-            socketPath: process.env.DB_SOCKETPATH
-        }
+            // e.g. socketPath: '/cloudsql/my-awesome-project:us-central1:my-cloud-sql-instance'
+            // same as host string above
+            socketPath: `/cloudsql/${process.env.DB_CONNECTION_NAME}`
+        },
+        logging: false,
+        operatorsAliases: false
     }
 );
 
