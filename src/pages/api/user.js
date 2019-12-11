@@ -5,6 +5,23 @@ const databaseOptions =
     process.env.NODE_ENV === 'production'
         ? {
             dialect: 'postgres',
+            // e.g. host: '/cloudsql/my-awesome-project:us-central1:my-cloud-sql-instance'
+            host: `/cloudsql/${process.env.DB_CONNECTION_NAME}`,
+            pool: {
+                max: 5,
+                min: 0,
+                acquire: 30000,
+                idle: 10000
+            },
+            dialectOptions: {
+                // e.g. socketPath: '/cloudsql/my-awesome-project:us-central1:my-cloud-sql-instance'
+                // same as host string above
+                socketPath: `/cloudsql/${process.env.DB_CONNECTION_NAME}`
+            },
+            logging: false
+        }
+        : {
+            dialect: 'postgres',
             host: process.env.DB_HOST,
             pool: {
                 max: 5,
@@ -13,8 +30,7 @@ const databaseOptions =
                 idle: 10000
             },
             logging: false
-        }
-        : {};
+        };
 
 const sequelize = new Sequelize(
     process.env.DB_DATABASE,
