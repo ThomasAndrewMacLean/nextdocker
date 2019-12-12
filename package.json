@@ -22,6 +22,7 @@
     },
     "homepage": "https://github.com/ThomasAndrewMacLean/nextdocker#readme",
     "dependencies": {
+        "@sentry/browser": "^5.10.2",
         "@zeit/next-css": "^1.0.1",
         "dotenv": "^8.2.0",
         "firebase": "^7.5.2",

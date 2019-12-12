@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { NextPage } from 'next';
-import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 import UserList from '../components/UserList';
 import { UserType } from '../types/types';
@@ -9,6 +8,7 @@ import { Form, SubmitButton, TextInput } from '../styles/Form';
 import { Button, SecondaryButton } from '../styles/Button';
 import Layout from '../components/Layout';
 import { auth, firebase } from '../firebase';
+import Link from 'next/link';
 
 const IndexPage: NextPage = (props: any) => {
     const [title, setTitle] = useState<string>('Hello Bothrs');
