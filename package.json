@@ -24,6 +24,9 @@
     "dependencies": {
         "@zeit/next-css": "^1.0.1",
         "dotenv": "^8.2.0",
+        "firebase": "^7.5.2",
+        "isomorphic-unfetch": "^3.0.0",
+        "monk": "^7.1.1",
         "next": "^9.1.5",
         "pg": "^7.14.0",
         "pg-hstore": "^2.3.3",

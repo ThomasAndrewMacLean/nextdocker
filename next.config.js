@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+// in production we set the variables in google cloud run
 const envVariables =
     process.env.NODE_ENV === 'production'
         ? {}
