@@ -3,7 +3,7 @@ import withAuth from '../helpers/withAuth';
 import { auth } from '../firebase';
 
 import Layout from '../components/Layout';
-import Link from 'next/Link';
+import Link from 'next/link';
 
 class Admin extends React.Component {
     render() {
