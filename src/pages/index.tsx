@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NextPage } from 'next';
-import Link from 'next/Link';
+import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 import UserList from '../components/UserList';
 import { UserType } from '../types/types';

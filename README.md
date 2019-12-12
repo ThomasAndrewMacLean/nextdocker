@@ -8,3 +8,11 @@
 ### TODO
 
 [Send message to Slack when Cloud build is done.](https://cloud.google.com/cloud-build/docs/configure-third-party-notifications)
+
+### SETUP
+
+-   create Google Cloud Project (fill in in cloudbuild.json file)
+-   create Firebase app (credentials for client)
+-   create Mongo Atlas Database (read-write user)
+-   have a google validated site (demo.bothrs.com)
+-   fill in ENV file locally + Google Run
