@@ -1,5 +1,6 @@
 import App from 'next/app';
 import React from 'react';
+import * as Sentry from '@sentry/browser';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../styles/theme';
 
