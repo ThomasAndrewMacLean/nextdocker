@@ -8,7 +8,11 @@
         "build": "next build",
         "start": "next start",
         "type-check": "tsc",
-        "start:production": "next start -p $PORT"
+        "start:production": "next start -p $PORT",
+        "docker-start": "docker-compose up",
+        "docker-build": "docker-compose build",
+        "docker-stop": "docker-compose down",
+        "docker-clean": "docker system prune -af"
     },
     "repository": {
         "type": "git",

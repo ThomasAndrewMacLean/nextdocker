@@ -102,6 +102,7 @@ const IndexPage: NextPage = (props: any) => {
                     type="text"
                     name="name"
                     id="userName"
+                    required
                 />
                 <SubmitButton type="submit" value="Add" />
             </Form>

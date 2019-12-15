@@ -1,7 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 const config = {
-    apiKey: 'AIzaSyD3JS3Xc-EZJqRViR9rE4jwDjy0GL1gtrQ',
+    apiKey: process.env.FIREBASE_API_KEY,
     authDomain: 'healthbuddy-cfc4a.firebaseapp.com',
     databaseURL: 'https://healthbuddy-cfc4a.firebaseio.com',
     projectId: 'healthbuddy-cfc4a',
