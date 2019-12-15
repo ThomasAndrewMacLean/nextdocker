@@ -6,7 +6,7 @@ import { theme } from '../styles/theme';
 
 if (process.env.NODE_ENV === 'production') {
     Sentry.init({
-        dsn: 'https://0d5a6b06cd244091820d9ba99846bbbb@sentry.io/1849962'
+        dsn: process.env.SENTRY
     });
 }
 
