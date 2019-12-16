@@ -1,4 +1,4 @@
-const connectionstring = `mongodb://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASSWORD}@${process.env.MONGO_CONNECTION_STRING}`;
+const connectionstring = process.env.MONGO_CONNECTION_STRING;
 const monk = require('monk');
 const db = monk(connectionstring);
 
