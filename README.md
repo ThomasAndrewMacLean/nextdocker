@@ -19,14 +19,24 @@ The CI/CD pipeline uses Google Cloud Platform. In google Cloud Build we set a tr
 -   Enable the Resource Manager API
 
 -   Cloud Build => Settings => Enabel Cloud Run Admin
--   IAM => Service Accounts Menu => 
+-   IAM => Service Accounts Menu => In the list of members, locate and selec [PROJECT_NUMBER]-compute@developer.gserviceaccount.com.
+Click SHOW INFO PANEL in the top right corner.
+In the Permissions panel, click the Add Member button.
+Enter the Cloud Build service account ([PROJECT_NUMBER]@cloudbuild.gserviceaccount.com) in the New Member input field.
+In the Role dropdown, select Service Accounts, and then Service Account User.
 
 
-(fill in in cloudbuild.json file)
+In cloudbuild.json, replace newproject-262123 with the google cloud project ID for each of the 4 steps.
+
+-   In Cloud build, connect your Github repository and add a new Trigger.
+    Choose the branch/tag that should trigger a new build
+    In the build configuration: Select Cloud Build configuration file (yaml or json), and point it to cloudbuild.json
+
+-   After you push to github and Cloud Build runs for the first time, it will have created a service in cloudRun. We can add a custom domain to it here (from a verified site), and if you go to the details page, we will click 'deploy new version' and add the .env variables here.
+
 -   create Firebase app (credentials for client)
 -   create Mongo Atlas Database (read-write user)
--   have a google validated site (demo.bothrs.com)
--   fill in ENV file locally + Google Run
+
 
 ### 📚 Reads 📚
 

@@ -22,7 +22,7 @@
                 "beta",
                 "run",
                 "deploy",
-                "staging",
+                "production",
                 "--image",
                 "gcr.io/newproject-262123/latest",
                 "--region",
