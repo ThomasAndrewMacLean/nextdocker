@@ -19,7 +19,7 @@ The CI/CD pipeline uses Google Cloud Platform. In google Cloud Build we set a tr
 -   Enable the Resource Manager API
 
 -   Cloud Build => Settings => Enabel Cloud Run Admin
--   IAM => Service Accounts Menu => In the list of members, locate and selec [PROJECT_NUMBER]-compute@developer.gserviceaccount.com.
+-   IAM => Service Accounts Menu => In the list of members, locate and select [PROJECT_NUMBER]-compute@developer.gserviceaccount.com.
 Click SHOW INFO PANEL in the top right corner.
 In the Permissions panel, click the Add Member button.
 Enter the Cloud Build service account ([PROJECT_NUMBER]@cloudbuild.gserviceaccount.com) in the New Member input field.
