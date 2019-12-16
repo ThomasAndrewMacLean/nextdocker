@@ -30,7 +30,7 @@ In cloudbuild.json, replace newproject-262123 with the google cloud project ID f
 
 -   In Cloud build, connect your Github repository and add a new Trigger.
     Choose the branch/tag that should trigger a new build
-    In the build configuration: Select Cloud Build configuration file (yaml or json), and point it to cloudbuild.json
+    In the build configuration: Select Cloud Build configuration file (yaml or json), and point it to cloudbuild.json (Later we will do the same for the production build/run)
 
 -   After you push to github and Cloud Build runs for the first time, it will have created a service in cloudRun. We can add a custom domain to it here (from a verified site), and if you go to the details page, we will click 'deploy new version' and add the .env variables here.
 
